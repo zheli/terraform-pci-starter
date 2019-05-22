@@ -12,3 +12,6 @@ terraform.out
 *.profraw
 *tfstate*
 workstation.env
+_helpers/hipsterservice.crt
+_helpers/hipsterservice.csr
+_helpers/hipsterservice.key
