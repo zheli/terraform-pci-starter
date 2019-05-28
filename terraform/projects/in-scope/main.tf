@@ -23,6 +23,10 @@ data "terraform_remote_state" "project_network" {
   }
 }
 
+locals {
+  shared_vpc_subnets_fully_qualified_id_list_in_scope = ["${local.vpc_subnet_fully_qualified_id_prefix}${local.in_scope_subnet_name}"]
+}
+
 module "project_in_scope" {
   source  = "terraform-google-modules/project-factory/google"
   version = "2.1.1"
@@ -34,7 +38,7 @@ module "project_in_scope" {
   folder_id       = "${local.folder_id}"
 
   shared_vpc                  = "${data.terraform_remote_state.project_network.project_id}"
-  shared_vpc_subnets          = ["projects/${local.project_network}/regions/${var.region}/subnetworks/${local.in_scope_subnet_name}"]
+  shared_vpc_subnets          = "${local.shared_vpc_subnets_fully_qualified_id_list_in_scope}"
   disable_services_on_destroy = false
 
   activate_apis = [

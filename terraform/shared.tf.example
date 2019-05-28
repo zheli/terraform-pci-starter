@@ -83,4 +83,7 @@ locals {
 
   forseti_cscc_source_id          = ""
   forseti_cscc_violations_enabled = "false"
+
+  # helper variables
+  vpc_subnet_fully_qualified_id_prefix = "projects/${local.project_network}/regions/${var.region}/subnetworks/"
 }
