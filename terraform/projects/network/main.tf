@@ -15,8 +15,8 @@
  */
 
 module "project_network" {
-  source  = "terraform-google-modules/project-factory/google"
-  version = "2.1.1"
+  source  = "git@github.com:terraform-google-modules/terraform-google-project-factory.git?ref=v2.1.1"
+  # source  = "../../../../../../../../terraform-google-project-factory"
 
   name                        = "${local.project_network}"
   org_id                      = "${var.org_id}"
@@ -32,8 +32,8 @@ module "project_network" {
 }
 
 module "vpc_pci" {
-  source  = "terraform-google-modules/network/google"
-  version = "0.6.0"
+  source  = "../../../../../../../../terraform-google-network"
+  # version = "0.6.0"
 
   shared_vpc_host = "true"
   project_id      = "${module.project_network.project_id}"

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 terraform {
-  required_version = "~> 0.11.13"
+#  required_version = "~> 0.11.13"
   backend "gcs" {
     bucket  = "BUCKET_PREFIX-terraform-admin"
     prefix  = "terraform/state/network"
