@@ -617,8 +617,9 @@ command.
   Security Command Center. It may require that Forseti is configured twice.
   Once without the `forseti_cscc_source_id` variable set and once again after
   CSCC is manually configured.
+- As detailed in [Data Loss Prevention API](docs/dlp.md), the DLP API filter, as
+  implemented, is not designed to scale to handle production loads.
 - This demo is meant to showcase various GCP features and act as a starting
   point to build a security-focused environment focused on PCI compliance. This
   demo has **not been reviewed by a QSA** and deploying an application into
   this environment does not qualify as being PCI-DSS compliant
-
