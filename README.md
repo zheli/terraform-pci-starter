@@ -593,8 +593,11 @@ command.
 
 ## Known Issues and Limitations
 
-- It's best to build this demo in a new GCP Organization. Some resources like
-  Forseti and Cloud Security Command Center are Organization-level resources.
+- This demo assumes that it will be deployed to a dedicated GCP Organization.
+  Some components, like Forseti and Cloud Security Command Center are
+  Organization-level resources that are not designed to be run with multiple
+  copies in a single GCP Organization. They don't necessarily conflict, but
+  may, depending on your Organization's configuration.
 - If you can not create a new Organization for this demo, your particular GCP
   Organization's roles and permissions may vary. You may need certain resources
   such as the Terraform Service Account and Terraform Admin Project to be
