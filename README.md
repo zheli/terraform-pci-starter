@@ -79,7 +79,7 @@ correctly. We need to make sure we have the correct tools and a GCP account
 with the correct permissions.
 
 ### Installation Dependencies
-- [Terraform](https://www.terraform.io/downloads.html)
+- [Terraform](https://www.terraform.io/downloads.html) (Only use Terraform 1.11)
 - [gcloud](https://cloud.google.com/sdk/gcloud/)
 - [Docker](https://docs.docker.com/install/)
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
